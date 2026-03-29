@@ -1,12 +1,12 @@
 'use client';
 import { PageHeader } from '../../../components/shared/PageHeader';
-import { Plus, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Plus, Camera, ThumbsUp, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 
 const accounts = [
-  { name: 'Clinique Lumière', handle: '@cliniquelumiere', platform: 'Instagram', followers: 12400, engagement: 4.8, icon: Instagram, color: 'text-pink-500' },
-  { name: 'Clinique Lumière', handle: 'Clinique Lumière', platform: 'Facebook', followers: 5100, engagement: 3.2, icon: Facebook, color: 'text-blue-500' },
-  { name: 'Marie-Ève Tremblay', handle: 'marie-eve-tremblay', platform: 'LinkedIn', followers: 2300, engagement: 5.1, icon: Linkedin, color: 'text-blue-700' },
+  { name: 'Clinique Lumière', handle: '@cliniquelumiere', platform: 'Instagram', followers: 12400, engagement: 4.8, icon: Camera, color: 'text-pink-500' },
+  { name: 'Clinique Lumière', handle: 'Clinique Lumière', platform: 'Facebook', followers: 5100, engagement: 3.2, icon: ThumbsUp, color: 'text-blue-500' },
+  { name: 'Marie-Ève Tremblay', handle: 'marie-eve-tremblay', platform: 'LinkedIn', followers: 2300, engagement: 5.1, icon: Briefcase, color: 'text-blue-700' },
 ];
 
 export default function SocialPage() {

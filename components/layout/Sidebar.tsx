@@ -74,12 +74,13 @@ export function Sidebar() {
                 const Icon = ICONS[item.icon] || LayoutDashboard;
                 const active = pathname === item.href || (item.href !== '/' && pathname?.startsWith(item.href));
                 const locked = item.plan && !hasAccess(currentPlan, item.plan);
+                const badge = 'badge' in item ? (item as any).badge : undefined;
                 return (
                   <Link key={item.href} href={locked ? '#' : item.href}
                     className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${active ? 'bg-[var(--sidebar-active-bg)] text-[var(--sidebar-active-text)]' : 'text-[var(--sidebar-text)] hover:bg-white/5 hover:text-white'} ${locked ? 'opacity-50' : ''}`}>
                     <Icon size={18} />
                     <span className="flex-1 truncate">{item.label}</span>
-                    {item.badge && <span className="text-[10px] px-1.5 py-0.5 bg-[var(--color-accent)]/20 text-[var(--color-accent)] rounded-full">{item.badge}</span>}
+                    {badge && <span className="text-[10px] px-1.5 py-0.5 bg-[var(--color-accent)]/20 text-[var(--color-accent)] rounded-full">{badge}</span>}
                     {locked && <Lock size={12} className="text-white/30" />}
                   </Link>
                 );
